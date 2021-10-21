@@ -1,0 +1,63 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
+
+/* Custom style */
+
+.is-active {
+  color: var(--bs-light) !important;
+  text-decoration: underline;
+}
+
+/*
+|==============================================================================
+| * stk-ftr-in-btm.css 
+|==============================================================================
+*/
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+main {
+  /* By setting flex-grow to 1, the main content will take up 
+ all of the remaining space on the page (the other elements have flex-grow: 0 and won't contest the free space).
+   1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto !important;
+  margin-top: 56px !important;
+  margin-bottom: 40px !important;
+}
+
+header,
+footer {
+  /* We want the header to have a static height - it will always take up just as much space as it needs. 
+   0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto !important;
+}
+
+header,
+main,
+footer {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.copyright {
+  background: rgba(0, 0, 0, 0.1);
+}
