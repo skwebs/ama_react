@@ -3,6 +3,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 import Register from "./components/pages/Register";
+import Students from "./components/pages/Students";
 import PageNotFound from "./components/pages/PageNotFound";
 import Navbar from "./components/inc/Navbar";
 import Footer from "./components/inc/Footer";
@@ -22,6 +23,7 @@ const App = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/students" component={Students} />
           {/* <Redirect exact from="/" to="/home" /> */}
           <Route path="*" component={PageNotFound} />
           {/* <Route path="*">

@@ -37,6 +37,11 @@ const Navbar = () => {
                   Register
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink activeClassName="active" className="nav-link" exact to="/students">
+                  Students
+                </NavLink>
+              </li>
             </ul>
           </div>
 
