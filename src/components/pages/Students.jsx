@@ -11,6 +11,29 @@ const Studensts = () => {
       })
   }, []);
 
+  // -----------------------------------------------------------------------------------------------------------------
+  const getData = () => {
+    // Make a request for a user with a given ID
+    axios.get('https://anshumemorial.in/api/api/v1/user/0')
+      .then(function (response) {
+        // handle success
+        console.log("response:", response);
+        return response;
+      })
+      .catch(function (error) {
+        // handle error
+        console.log("error:", error);
+      })
+      .then(function (res) {
+        // always executed
+        console.log("res:", res);
+        if (res.status === 200) {
+          console.log("res.status:", res.status);
+        }
+      });
+  }
+  // -----------------------------------------------------------------------------------------------------------------
+
   const onDelete = (id) => {
     alert(id);
   }
@@ -55,7 +78,7 @@ const Studensts = () => {
         </table>
       </div>
 
-
+      <button onClick={() => getData()} className="btn btn-primary">data</button>
     </div>
   )
 }
